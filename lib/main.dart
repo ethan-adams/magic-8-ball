@@ -34,7 +34,9 @@ class _BallState extends State<Ball> {
     return Center(
       child: FlatButton(
         onPressed: () {
-
+          setState(() {
+            ballNumber = Random().nextInt(4) + 1;
+          });
           print('I got clicked');
         },
         child: Image.asset('images/ball$ballNumber.png'),
